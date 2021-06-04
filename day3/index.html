@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <style>
+            body{
+                background-color: #111;
+            }
+            .outer{
+                background-color: #d7d7d7;
+                display: inline-block;
+                width:250px;
+                height:250px;
+                border-radius:50%;
+            }
+            .inner-circle{
+                margin:5px;
+                background-color:#eb3223;
+                display: inline-block;
+                
+                width:240px;
+                height:240px;
+                border-radius:50%;
+            }
+            .inner2{
+                margin:20px;
+                background-color:#fff;
+                display: inline-block;
+                
+                width:200px;
+                height:200px;
+                border-radius:50%;
+                box-shadow: inset 0 0 10px 1px #111;
+            }
+            .clockhands,.hourhand,.minutehand,.secondhand{
+                display: inline-block;
+            }
+            .hourhand,.minutehand,.secondhand{
+                width:100px;
+                height:5px;
+                background-color: #111;
+                transform-origin: left;
+            }
+            .clockhands{
+             margin:60px auto;
+
+            }
+            .hourhand{
+                 position: relative;
+                 top:25px;
+                 left:100px;
+                transform: rotate(120deg);
+            }
+            .minutehand{
+                 position: relative;
+                 top:8px;
+                 left:100px;
+                transform: rotate(90deg);
+            }
+            .secondhand{
+                 position:relative;
+                 top:-7px;
+                 left:100px;
+                animation:clockspin 10s linear infinite;
+                
+            }
+            img {
+                position: absolute;
+                left:100px;
+                top:50px;
+
+            }
+            @keyframes clockspin {
+                0%{
+                    transform:rotate(0deg)
+                }
+                
+                100%{
+                    transform:rotate(360deg);
+                }
+            }   
+        </style>
+        <div>
+        <div class="outer">
+            <div class ="inner-circle">
+                <div class = "inner2">
+                    <img src = "https://media1.tenor.com/images/ba3b6a898fbf527ef2dadff516a6089d/tenor.gif?itemid=21217404" width= "60" height = "auto">
+                    <div class = "clockhands">
+                        <div class = "hourhand">
+
+                        </div>
+                        <div class = "minutehand">
+
+                        </div>
+                        <div class = "secondhand">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <script src="" async defer></script>
+    </body>
+</html>
