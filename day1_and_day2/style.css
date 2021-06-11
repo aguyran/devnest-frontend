@@ -1,3 +1,13 @@
-h1 {
-    color:pink;
+body{
+    background-color: blanchedalmond;
+    font-family: 'Open Sans', sans-serif;
+}
+.address>ul>li,.address{
+    
+    line-height: 2rem;
+    font-size: 1.25rem;
+    list-style-type: none;
+}
+.address>ul{
+    padding:0
 }
