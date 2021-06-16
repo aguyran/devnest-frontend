@@ -1,15 +1,18 @@
 //Q1
 function is_array(xd){
-    return xd.length>=1 && typeof(xd)==="object";
+    
+    return xd.constructor==Array;
+
 }
 console.log(is_array('w3resource'));
 console.log(is_array(['w3resource','yeye']));
 console.log(is_array([1, 2, 4, 0]));
 
+
 //Q2
 
 function clone_array(xd){
-    return [...xd]
+    return JSON.parse(JSON.stringify(xd))
 }
 console.log(clone_array([1, 2, 4, 0]));
 console.log(clone_array([1, 2, [4, 0]]));

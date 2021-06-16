@@ -18,4 +18,4 @@ window.addEventListener('load',()=>{
     buttons.addEventListener('click',(evt)=>{
        document.getElementById("result").innerHTML=calculate(evt.target.id);
     });
-});
+}); 
