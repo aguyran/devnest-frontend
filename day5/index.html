@@ -1,106 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-size: cover;
+        background-repeat: no-repeat;
 
+        height: 100vh;
+        background-color: #fbab7e;
+        background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+      }
+      form {
+        padding: 10px;
+        text-align: center;
+      }
+      input {
+        border: white 3px dashed;
+        background: transparent;
+        display: block;
+        margin: 2rem auto;
+        width: 30rem;
+        height: 5rem;
+        font-size: 4.5rem;
+        color: white;
+      }
+
+      input:focus {
+        border: green 3px dashed;
+        outline: 0;
+        transition: 0.4s;
+      }
+      #buttonGroup {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;
+      }
+      button {
+        width: 7rem;
+        color: white;
+        height: auto;
+        border: none;
+        border-radius: 1rem;
+        font-size: 3rem;
+        background-color: #8ec5fc;
+        background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+        transition: 0.7s;
+      }
+      button:hover {
+        transform: scale(1.1);
+        transition: 0.4s;
+      }
+      p {
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 4rem;
+        color: white;
+      }
+      @media only screen and (max-width: 600px) {
+        #buttonGroup {
+          width: 80%;
         }
-        body{
-            background-size:cover;
-            background-repeat: no-repeat;
-            
-            height: 100vh;
-            background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-
-
-
-
-
-
-
-
-
-
+        button {
+          width: 5rem;
         }
-        form{
-            padding:10px;
-            text-align: center;
-        }   
-        input{
-            border: white 3px dashed;
-            background: transparent;
-            display: block;
-            margin: 2rem auto;
-            width:30rem;
-            height:5rem;
-            font-size: 4.5rem;
-            color: white;   
-        }   
-      
-        input:focus{
-            border: green 3px dashed;
-            outline:0;
-            transition: 0.4s;
-        }
-        #buttonGroup{
-            display:flex;
-            justify-content: space-between;
-            width:50%;
-            margin:0 auto;
-        }
-        button{
-            width:7rem;
-            color:white;
-            height:auto;
-            border:none;
-            border-radius:1rem;
-            font-size:3rem;
-            background-color: #8EC5FC;
-background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-transition: 0.7s;
-
-        }
-        button:hover{
-            transform:scale(1.1);
-            transition: 0.4s;
-            
-        }
-        p{
-            margin-top: 4rem;
-            text-align: center;
-            font-size: 4rem;
-            color: white;
-        }
-        @media only screen and (max-width: 600px) {
-            #buttonGroup{
-                width: 80%;
-            }
-            button{
-                width: 5rem;
-            }
-        }
+      }
     </style>
-    <script src = "index.js"></script>
-</head>
-<body>
+    <script src="index.js"></script>
+  </head>
+  <body>
     <form>
-        <input type="text" id ="oneTxt">
-        <input type = "text" id = "secondTxt">
+      <input type="text" id="oneTxt" />
+      <input type="text" id="secondTxt" />
     </form>
-<div id = "buttonGroup">
-    <button id = "add">+</button>
-    <button id = "sub">-</button>
-    <button id = "mul">*</button>
-    <button id = "div">/</button>
-    
-</div>
-<p id = "result">Result</p>
-</body>
+    <div id="buttonGroup">
+      <button id="add">+</button>
+      <button id="sub">-</button>
+      <button id="mul">*</button>
+      <button id="div">/</button>
+    </div>
+    <p id="result">Result</p>
+  </body>
 </html>
