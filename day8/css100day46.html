@@ -1,3 +1,4 @@
+<!--https://codepen.io/aguyran/pen/RwpdrdJ-->
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -48,14 +49,15 @@
       window.addEventListener("load", () => {
         console.log("test");
 
-        var parentd = document.getElementById("parent");
+        const parentd = document.getElementById("parent");
+        let xd1;
         for (let i = 0; i < 400; i++) {
-          var xd = document.createElement("div");
-          xd.className = "xd";
+          xd1 = document.createElement("div");
+          xd1.className = "xd";
           console.log("yeye");
-          parentd.appendChild(xd);
+          parentd.appendChild(xd1);
         }
-        var xd = document.querySelectorAll(".xd");
+        const xd = document.querySelectorAll(".xd");
 
         xd.forEach((i) => {
           i.addEventListener("click", () => {
