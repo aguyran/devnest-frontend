@@ -68,10 +68,10 @@ var libraryQ6 = [
 ];
 function compareCauseIAmBadAtArrowFunctions(a, b) {
   if (a.libraryID < b.libraryID) {
-    return -1;
+    return 1;
   }
   if (a.libraryID > b.libraryID) {
-    return 1;
+    return -1;
   }
   return 0;
 }
