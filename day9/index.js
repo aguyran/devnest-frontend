@@ -1,7 +1,6 @@
 window.addEventListener("load", () => {
   let i = 0;
   document.addEventListener("keydown", (e) => {
-    console.log(e);
     const keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
     rgb = () => {
       document.getElementById("parent").classList.toggle("haxor");
