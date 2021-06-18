@@ -5,10 +5,17 @@
   line-height: 0px;
   margin: auto;
 }
+#parent.haxor {
+  background: url("https://j.gifs.com/rRkznp.gif");
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 body {
   background-color: #523f38;
   color: #fff;
 }
+
 h1 {
   font-size: 5rem;
 
