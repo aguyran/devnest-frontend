@@ -74,6 +74,7 @@ let random = function (e) {
         e.target.classList.add("disabled");
         last[0].classList.add("disabled");
         scores += 1;
+        temp = 0;
         scoreDiv.innerText = `Score: ${scores}`;
         last = [];
       } else {
