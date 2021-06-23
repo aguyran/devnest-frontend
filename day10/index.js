@@ -43,7 +43,7 @@ let emojiArray = [
 const moveDiv = document.getElementById("result");
 const scoreDiv = document.getElementById("score");
 emojiArray = shuffle(emojiArray);
-console.log(emojiArray.length);
+
 for (let i = 0; i < 36; i++) {
   let div = document.createElement("div");
   let front = document.createElement("div");
@@ -85,7 +85,6 @@ grid.addEventListener("click", (e) => {
     moves += 1;
     moveDiv.innerText = `Moves: ${moves}`;
   }
-  console.log(e);
 });
 
 // Fishers Algorithm From
