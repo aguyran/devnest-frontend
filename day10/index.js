@@ -1,5 +1,6 @@
 const grid = document.getElementById("grid");
 let last = [];
+let temp = 0;
 let moves = 0;
 let scores = 0;
 let emojiArray = [
@@ -60,9 +61,10 @@ for (let i = 0; i < 36; i++) {
   div.appendChild(front);
   div.appendChild(rear);
 }
-grid.addEventListener("click", (e) => {
-  if (!e.target.classList.contains("spin")) {
+let random = function (e) {
+  if (!e.target.classList.contains("spin") && temp < 2) {
     e.target.classList.add("spin");
+    temp += 1;
     let rear = e.target.childNodes[1];
     if (last.length > 0) {
       if (
@@ -84,8 +86,12 @@ grid.addEventListener("click", (e) => {
 
     moves += 1;
     moveDiv.innerText = `Moves: ${moves}`;
+    if (scores >= 18) {
+      gameOver();
+    }
   }
-});
+};
+grid.addEventListener("click", random);
 
 // Fishers Algorithm From
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -110,5 +116,20 @@ function removeSpin(e, passedLast) {
   setTimeout(() => {
     e.target.classList.remove("spin");
     passedLast.classList.remove("spin");
+    temp = 0;
   }, 800);
+}
+function gameOver() {
+  grid.innerHTML = "<h1>Game Over You Won!</h1>";
+  let button = document.createElement("button");
+  button.classList.add("end-btn");
+  grid.removeEventListener("click", random);
+  button.addEventListener("click", () => {
+    location.reload();
+    return false;
+  });
+
+  button.innerText = "reload";
+  grid.appendChild(button);
+  grid.classList.add("game-over");
 }

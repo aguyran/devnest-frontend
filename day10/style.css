@@ -97,3 +97,21 @@ p {
   border-radius: 0.25rem;
   font-size: 1.25rem;
 }
+#grid.game-over {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.end-btn {
+  display: block;
+  padding: 1.25rem 2rem;
+  font-size: 1.5rem;
+  background-color: yellow;
+  border: none;
+  border-radius: 10px;
+}
+.end-btn:hover {
+  opacity: 0.8;
+  transition: 250ms ease-in;
+}
