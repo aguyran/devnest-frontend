@@ -108,10 +108,15 @@ function forButton(i) {
     score += 1;
   }
   globalQues += 1;
-  if (globalQues == 10) gameOver();
+  if (globalQues == 10) {
+    gameOver();
+    return false;
+  }
   quesContainerMain.removeChild(quesContainerMain.childNodes[0]);
   quesContainerMain.appendChild(quesObj(globalQues));
   scoreLabel.innerText = `Score: ${score}`;
 }
 
-function gameOver() {}
+function gameOver() {
+  alert("Quiz Over You had a score of " + score);
+}
