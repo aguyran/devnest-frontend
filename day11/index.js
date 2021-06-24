@@ -2,41 +2,49 @@ let questions = null;
 let globalQues = 0;
 let score = 0;
 let mergedArray = [];
+const totalQuestions = document.getElementById("number-text").value;
+const difficulty = document.getElementById("difficulty").value;
 const startBtn = document.getElementById("start");
 const mainDiv = document.getElementById("main");
 const container = document.getElementById("container");
 const quesContainerMain = document.getElementById("quesContainer");
 const scoreLabel = document.getElementById("score");
+const questionNumLabel = document.getElementById("question-number");
 startBtn.addEventListener("click", () => {
-  fetch("https://opentdb.com/api.php?amount=10&difficulty=medium").then(
-    function (response) {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      console.log(response.status);
-      response.json().then(function (response) {
-        if (!response["response_code"]) {
-          questions = response["results"];
-          startQuiz();
-        } else console.log("error! Fetching");
-      });
+  fetch(
+    `https://opentdb.com/api.php?amount=${totalQuestions}&difficulty=${difficulty}`
+  ).then(function (response) {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-  );
+    console.log(response.status);
+    response.json().then(function (response) {
+      if (!response["response_code"]) {
+        questions = response["results"];
+        startQuiz();
+      } else console.log("error! Fetching");
+    });
+  });
 });
 
 function startQuiz() {
   mainDiv.classList.remove("main-menu");
   mainDiv.classList.add("game-canvas");
   startBtn.classList.add("disabled");
-  document.getElementsByTagName("form")[0].classList.add("disabled");
+  document.getElementById("main2").classList.add("disabled");
+  document.getElementById("main2").classList.remove("random");
   quesContainerMain.classList.remove("disabled");
   container.classList.remove("disabled");
   container.classList.add("game-container");
   scoreLabel.classList.remove("disabled");
   quesContainerMain.appendChild(quesObj(globalQues));
+  questionNumLabel.classList.remove("disabled");
 }
 
 function quesObj(quesNum) {
+  questionNumLabel.innerText = `Question ${
+    globalQues + 1
+  } out of ${totalQuestions}`;
   let quesContainer = document.createElement("div");
   mergedArray = [
     ...questions[quesNum]["incorrect_answers"],
@@ -64,11 +72,11 @@ function optionObject(numberOfOptions, mergedArray) {
     let optionName = document.createElement("p");
     let optionButton = document.createElement("button");
     optionName.className = "option-name";
-    optionName.innerText = mergedArray[i];
+    optionName.innerHTML = mergedArray[i];
     optionButton.className = "ans-btn";
     optionDiv.appendChild(optionName);
     optionDiv.appendChild(optionButton);
-    optionButton.innerText = "Click Here";
+    optionButton.innerText = "Select Option";
     optionButton.addEventListener("click", () => forButton(i));
   }
 

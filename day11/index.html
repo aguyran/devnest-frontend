@@ -20,13 +20,31 @@
       </p>
     <![endif]-->
     <div id="main" class="main-menu">
-      <form>
-        <input type = text>
-      </form>
-      <button id="start" class="menu-btns">START</button>
+      <div id="main2" class="random">
+        <form>
+          <label>Number of Questions</label>
+          <input
+            type="number"
+            id="number-text"
+            value="10"
+            name="numberinput"
+            min="1"
+            max="50"
+          />
+          <label>Difficulty</label>
+          <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </form>
+
+        <button id="start" class="menu-btns">START</button>
+      </div>
       <div id="container" class="disabled">
         <div id="quesContainer" class="disabled"></div>
         <div id="score" class="score disabled">Score: 0</div>
+        <div id="question-number" class="score disabled">question 1 of x</div>
       </div>
     </div>
 
