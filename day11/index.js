@@ -2,13 +2,14 @@ let questions = null;
 let globalQues = 0;
 let score = 0;
 let mergedArray = [];
-const totalQuestions = document.getElementById("number-text").value;
+const totalQuestions = 10;
 const difficulty = document.getElementById("difficulty").value;
 const startBtn = document.getElementById("start");
 const mainDiv = document.getElementById("main");
 const container = document.getElementById("container");
 const quesContainerMain = document.getElementById("quesContainer");
 const scoreLabel = document.getElementById("score");
+
 const questionNumLabel = document.getElementById("question-number");
 startBtn.addEventListener("click", () => {
   fetch(
@@ -107,7 +108,10 @@ function forButton(i) {
     score += 1;
   }
   globalQues += 1;
+  if (globalQues == 10) gameOver();
   quesContainerMain.removeChild(quesContainerMain.childNodes[0]);
   quesContainerMain.appendChild(quesObj(globalQues));
   scoreLabel.innerText = `Score: ${score}`;
 }
+
+function gameOver() {}
