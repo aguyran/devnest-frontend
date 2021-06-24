@@ -34,8 +34,12 @@ body {
   background-color: beige;
 }
 .game-container {
+  flex-direction: column;
   width: 600px;
   height: 80vh;
   border-radius: 10px solid cyan;
   background-color: black;
+}
+.score {
+  font-size: 2rem;
 }
