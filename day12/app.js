@@ -12,6 +12,7 @@ if (JSON.parse(localStorage.getItem("todo"))) {
 
 document.getElementById("add-btn").addEventListener("click", () => {
   const text = document.getElementById("textfield").value;
+  document.getElementById("textfield").value = "";
   notesDiv.appendChild(notesObj(text));
   todos.push({ text1: text, status: true });
   localStorage.setItem("todo", JSON.stringify(todos));
