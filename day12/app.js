@@ -32,15 +32,8 @@ function notesObj(noteContent, done = true) {
   const statusBtn = document.createElement("button");
   statusBtn.addEventListener("click", () => {
     div2.classList.toggle("disabled");
-    if (statusBtn.childNodes[0].classList.contains("fa-check")) {
-      console.log("work");
-      statusBtn.childNodes[0].classList.remove("fa", "fa-check", "fa-xs");
-      statusBtn.childNodes[0].classList.add("fa", "fa-close", "fa-xs");
-    } else {
-      console.log("work");
-      statusBtn.childNodes[0].classList.remove("fa", "fa-close", "fa-xs");
-      statusBtn.childNodes[0].classList.add("fa", "fa-check", "fa-xs");
-    }
+    statusBtn.childNodes[0].classList.toggle("fa-check");
+    statusBtn.childNodes[0].classList.toggle("fa-close");
   });
   statusBtn.className = "status delete-btn";
   deleteBtn.className = "delete delete-btn ";
