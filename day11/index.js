@@ -2,7 +2,7 @@ let questions = null;
 let globalQues = 0;
 let score = 0;
 let mergedArray = [];
-const totalQuestions = 10;
+let totalQuestions = 10;
 const difficulty = document.getElementById("difficulty").value;
 const startBtn = document.getElementById("start");
 const mainDiv = document.getElementById("main");
@@ -12,6 +12,7 @@ const scoreLabel = document.getElementById("score");
 
 const questionNumLabel = document.getElementById("question-number");
 startBtn.addEventListener("click", () => {
+  totalQuestions = document.getElementById("numbertext").value;
   fetch(
     `https://opentdb.com/api.php?amount=${totalQuestions}&difficulty=${difficulty}`
   ).then(function (response) {
@@ -108,7 +109,7 @@ function forButton(i) {
     score += 1;
   }
   globalQues += 1;
-  if (globalQues == 10) {
+  if (globalQues == totalQuestions) {
     gameOver();
     return false;
   }
