@@ -17,11 +17,18 @@ body {
   max-width: 75px;
   font-size: 4rem;
   color: white;
+  transition: 500ms ease-in;
 }
+#add-btn:hover {
+  cursor: pointer;
+
+  background: #75e6da;
+}
+
 .add input {
   height: 4rem;
   width: 60%;
-  font-size: 4rem;
+  font-size: 3.5rem;
   border: none;
   max-width: 600px;
 }
@@ -37,13 +44,16 @@ body {
   margin-top: 4rem;
 }
 .note-body {
-  color: white;
+  color: #05445e;
   font-size: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 20px;
   transition: 250ms ease-in;
+  background: #d4f1f4;
+  padding: 10px;
+  border-radius: 10px;
 }
 .note-text {
   width: 60%;
@@ -75,6 +85,6 @@ body {
 .status.delete-btn {
   background-color: #05445e;
 }
-.delete.delete-btn:hover{
-    background-color: rgb(158, 21, 21);
+.delete.delete-btn:hover {
+  background-color: rgb(158, 21, 21);
 }
