@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+.test {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.board {
+  width: 200px;
+  height: 200px;
+}
+.board :nth-child(odd) {
+  background-color: red;
+}
