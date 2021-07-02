@@ -9,7 +9,7 @@ for (let i = 0; i < 10; i++) {
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <h1>Chess Pattern</h1>
       <div className="board">
         {array2.map((i, index) => {
           return array2[index].map((j, index2) => {
