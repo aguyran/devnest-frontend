@@ -11,18 +11,18 @@ function App() {
     <div className="App">
       <h1>Chess Pattern</h1>
       <div className="board">
-        {array2.map((i, index) => {
-          return array2[index].map((j, index2) => {
+        {array2.map((i, index) => {// eslint-disable-next-line
+          return array2[index].map((j, index2) => { 
             if (index === 0 || index2 === 9 || index2 === 0 || index === 9) {
-              return <div className="black" key={i}></div>;
+              return <div className="black" key={index2}></div>;
             } else if (index % 2 !== 0) {
               if (index2 % 2 !== 0)
-                return <div className="black" key={i}></div>;
-              else return <div className="test" key={i}></div>;
+                return <div className="black" key={index2}></div>;
+              else return <div className="test" key={index2}></div>;
             } else if (index % 2 === 0) {
               if (index2 % 2 === 0)
-                return <div className="black" key={i}></div>;
-              else return <div className="test" key={i}></div>;
+                return <div className="black" key={index2}></div>;
+              else return <div className="test" key={index2}></div>;
             }
           });
         })}
