@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Row from "./Row";
 
 function App() {
+  const rows = [];
+  for (let i = 0; i < 8; i++) {
+    rows.push(i % 2 === 0 ? <Row isOdd key={i} /> : <Row key={i} />);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Chess board</h2>
+      <div className="chessBoard">{rows}</div>
     </div>
   );
 }
