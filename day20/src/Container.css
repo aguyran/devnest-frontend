@@ -1,0 +1,9 @@
+body {
+  background-color: #111;
+}
+.card-container {
+  overflow: scroll;
+  height: 800px;
+  width: 28%;
+  margin: 0 auto;
+}
