@@ -1,10 +1,15 @@
+import "./Card.css";
 const Card = ({ title, value, handleClick, handleEdit }) => {
   return (
     <div className="card">
       <h2>{title}</h2>
-      <p>{value}</p>
-      <button onClick={handleClick}>delete</button>
-      <button onClick={handleEdit}>Edit</button>
+      <p>You Have Consumed {value} calories</p>
+      <button className="delete-btn" onClick={handleClick}>
+        Delete
+      </button>
+      <button className="edit-btn" onClick={handleEdit}>
+        Edit
+      </button>
     </div>
   );
 };
