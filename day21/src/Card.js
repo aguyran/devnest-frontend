@@ -7,8 +7,12 @@ const Card = ({ index, title, value, handleClick, state, handleEdit }) => {
   const handleEditCard = () => {
     if (isEdit) {
       handleEdit(index, { title: currentTitle, value: currentValue });
+      setEdit(!isEdit);
+    } else {
+      setEdit(!isEdit);
+      setTitle(title);
+      setValue(value);
     }
-    setEdit(!isEdit);
   };
   return (
     <div className="card">
