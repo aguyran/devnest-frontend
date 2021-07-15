@@ -1,15 +1,50 @@
+import { useState } from "react";
 import "./Card.css";
-const Card = ({ title, value, handleClick, handleEdit }) => {
+const Card = ({ index, title, value, handleClick, state, handleEdit }) => {
+  const [isEdit, setEdit] = useState(false);
+  const [currentTitle, setTitle] = useState(title);
+  const [currentValue, setValue] = useState(value);
+  const handleEditCard = () => {
+    if (isEdit) {
+      handleEdit(index, { title: currentTitle, value: currentValue });
+    }
+    setEdit(!isEdit);
+  };
   return (
     <div className="card">
-      <h2>{title}</h2>
-      <p>You Have Consumed {value} calories</p>
-      <button className="delete-btn" onClick={handleClick}>
-        Delete
-      </button>
-      <button className="edit-btn" onClick={handleEdit}>
-        Edit
-      </button>
+      {isEdit ? (
+        <div className="random">
+          <input
+            type="text"
+            required="required"
+            value={currentTitle}
+            onChange={(e) => setTitle(e.target.value)}
+          ></input>
+          <br></br>
+          <input
+            type="number"
+            required="required"
+            value={currentValue}
+            onChange={(e) => setValue(e.target.value)}
+          ></input>
+          <br />
+          <button className="edit-btn" onClick={handleEditCard}>
+            Save
+          </button>
+        </div>
+      ) : (
+        <div>
+          {" "}
+          <h2>{title}</h2>
+          <p>You Have Consumed {value} calories</p>
+          <button className="delete-btn" onClick={handleClick}>
+            Delete
+          </button>
+          <button className="edit-btn" onClick={handleEditCard}>
+            Edit
+          </button>
+        </div>
+      )}
     </div>
   );
 };

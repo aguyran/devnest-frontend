@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Container from "./Container";
 function App() {
   const [calories, setCalories] = useState("");
@@ -10,11 +10,7 @@ function App() {
     const newCards = [...cards, { title: item, value: calories }];
     setCards(newCards);
   };
-  useEffect(() => {
-    if (cards === []) console.log("array empty work");
-    if (!cards) console.log("lol");
-    console.log(cards);
-  });
+
   return (
     <div className="App">
       <header className="App-header">
