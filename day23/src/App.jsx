@@ -1,5 +1,4 @@
 import "./App.css";
-import { useCallback, useState } from "react";
 import useToggle from "./useToggle";
 function App() {
   const [isToggled, setToggle] = useToggle(false);
