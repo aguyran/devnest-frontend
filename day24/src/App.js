@@ -9,7 +9,7 @@ import Nav from "./Nav";
 import Home from "./Home";
 import Profile from "./Profile";
 import { isLoggedIn } from "./loggedContext";
-import { useContext, useState } from "react";
+import { useState } from "react";
 function App() {
   const [userLoggedIn, setUserLogin] = useState(false);
   return (
