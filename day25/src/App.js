@@ -18,6 +18,7 @@ import VeriCarousel from "./VeriCarousel";
 function App() {
   const [isDisabled, setDisabled] = useState(false);
   const [isAlert, setAlert] = useState(false);
+
   return (
     <div className="App">
       <Router>
@@ -27,30 +28,22 @@ function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link>
-                  <Link to="/" className="temp1">
-                    Main
-                  </Link>
+                <Nav.Link as={Link} to="/">
+                  Main
                 </Nav.Link>
 
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/Toast">
                     {" "}
-                    <Link to="/Toast" className="temp">
-                      Toast
-                    </Link>
+                    Toast
                   </NavDropdown.Item>
-                  <NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/Carousel">
                     {" "}
-                    <Link to="/Carousel" className="temp">
-                      Carousel
-                    </Link>
+                    Carousel
                   </NavDropdown.Item>
-                  <NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/About">
                     {" "}
-                    <Link to="/About" className="temp">
-                      About
-                    </Link>
+                    About
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
