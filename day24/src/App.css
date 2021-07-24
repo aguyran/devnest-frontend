@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-color: blanchedalmond;
+}
+.middleNav {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+  width: 40%;
+  margin: 0 auto;
+}
+.middleNav a {
+  color: white;
+}
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  height: 3rem;
+}
+
+button {
+  width: 6rem;
+  margin-top: 2rem;
+  height: 3rem;
+  border: none;
+  background-color: brown;
+  color: white;
+}

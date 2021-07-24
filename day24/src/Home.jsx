@@ -6,6 +6,7 @@ const Home = ({ handleClick }) => {
   return (
     <div>
       Welcome to Home
+      <br></br>
       <button onClick={() => handleClick((s) => !s)}>
         {user ? "Logout" : "Login"}
       </button>
