@@ -11,11 +11,13 @@ import {
   Button,
   ToastContainer,
   Card,
+  Alert,
 } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import VeriCarousel from "./VeriCarousel";
 function App() {
   const [isDisabled, setDisabled] = useState(false);
+  const [isAlert, setAlert] = useState(false);
   return (
     <div className="App">
       <Router>
@@ -93,18 +95,31 @@ function App() {
             <VeriCarousel></VeriCarousel>
           </Route>
           <Route path="/about">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://i.pinimg.com/originals/6e/cb/2a/6ecb2abced73e345736baaf114412f9d.gif
+            {isAlert ? (
+              <Alert
+                variant="danger"
+                onClose={() => setAlert(false)}
+                dismissible
+              >
+                <Alert.Heading>:( Your Pc Encountered an error</Alert.Heading>
+                <p>LULW your windows is crashing sad life !</p>
+              </Alert>
+            ) : (
+              <Card style={{ width: "18rem" }}>
+                <Card.Img
+                  variant="top"
+                  src="https://i.pinimg.com/originals/6e/cb/2a/6ecb2abced73e345736baaf114412f9d.gif
               "
-              />
-              <Card.Body>
-                <Card.Title>I am Soap</Card.Title>
-                <Card.Text>Legendary Weeb who is mad scientist</Card.Text>
-                <Button variant="primary">Click to show alert</Button>
-              </Card.Body>
-            </Card>
+                />
+                <Card.Body>
+                  <Card.Title>I am Soap</Card.Title>
+                  <Card.Text>Tell me Why I never wanna hear you say </Card.Text>
+                  <Button variant="primary" onClick={() => setAlert(true)}>
+                    Click to show alert
+                  </Button>
+                </Card.Body>
+              </Card>
+            )}
           </Route>
         </Switch>
       </Router>
