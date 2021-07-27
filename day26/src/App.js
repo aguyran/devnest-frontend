@@ -22,8 +22,8 @@ function App() {
           dispatch(updatedName(e.target.value));
         }}
       ></input>
-      <p>EMAIL: {email}</p>
-      <p>NAME: {name}</p>
+      <p>Email:{email}</p>
+      <p>Name:{name}</p>
     </div>
   );
 }

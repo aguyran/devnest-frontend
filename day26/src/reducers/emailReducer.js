@@ -1,6 +1,6 @@
 const emailReducer = (state = "", action) => {
   if (action.type === "TEXT_WRITTEN") {
-    return state;
+    return action.text;
   }
   return state;
 };
