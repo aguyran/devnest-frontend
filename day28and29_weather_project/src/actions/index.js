@@ -8,14 +8,14 @@ const updatePlace = (place) => {
 const updatePlaceData = (place) => {
   return (dispatch) => {
     fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${place}`
+      `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${place}&days=3`
     ).then((res) => {
       res.json().then((data) => {
+        console.log(data);
         dispatch({
           type: "UPDATE_PLACE_DATA",
           payload: data,
         });
-        console.log(data);
       });
     });
   };
@@ -25,4 +25,4 @@ const toggleTheme = () => {
     type: "TOGGLE_THEME",
   };
 };
-export { updatePlace, updatePlaceData,toggleTheme };
+export { updatePlace, updatePlaceData, toggleTheme };

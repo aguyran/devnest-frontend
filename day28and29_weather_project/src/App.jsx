@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { apiKey } from "./constants";
+
 import Form from "./Form";
 import WeatherCard from "./WeatherCard";
 import { useSelector } from "react-redux";
