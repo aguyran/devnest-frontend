@@ -9,10 +9,7 @@ const Navbar = () => {
       <div className={style.navbarMain}>
         <div className={style.navbarWrapper}>
           <FaAmazon className={style.amazonLogo} />
-          <div className={style.searchBar}>
-            <input type="text" />
-            <BiSearchAlt className={style.magnifyingGlass} />
-          </div>
+
           <div className={style.rightIcons}>
             <FaHeart className={style.wishlistHeart} />
             <FaShoppingCart className={style.shoppingCart} />
