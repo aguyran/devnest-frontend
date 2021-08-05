@@ -9,6 +9,7 @@ const Cards = (currentState) => {
     <Link
       to={`/product/${id}`}
       onClick={() => dispatch(setCurrentProduct(currentState.currentState))}
+      className = {style.links}
     >
       <div className={style.container}>
         <img src={image} alt={title} />

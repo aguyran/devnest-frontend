@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 3rem auto;
+}
+.image {
+  width: 300px;
+  height: 400px;
+}
+.content {
+  display: inline-block;
+  width: 50%;
+  color: white;
+  text-align: center;
+}
+.slider {
+  margin-top: 2rem;
+}
+.description {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Quicksand", sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

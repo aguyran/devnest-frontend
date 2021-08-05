@@ -5,11 +5,14 @@ export const fetchProducts = createAsyncThunk(
   async (_, thunkAPi) => {
     const res = await fetch("https://fakestoreapi.com/products/");
     const data = await res.json();
-    console.log(data);
     return data;
   }
 );
-
+export const fetchProduct = createAsyncThunk("fetch/product", async (id) => {
+  const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const data = await res.json();
+  return data;
+});
 const productSlice = createSlice({
   name: "product",
   initialState: {
@@ -28,6 +31,10 @@ const productSlice = createSlice({
   extraReducers: {
     [fetchProducts.fulfilled]: (state, action) => {
       state.productItems = action.payload;
+      state.isLoading = false;
+    },
+    [fetchProduct.fulfilled]: (state, action) => {
+      state.currentProduct = action.payload;
       state.isLoading = false;
     },
   },

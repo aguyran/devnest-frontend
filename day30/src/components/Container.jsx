@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../slices/productSlice";
 import Cards from "./Cards";
 import { useEffect } from "react";
+import Loader from "./Loader";
 const Container = () => {
   const products = useSelector((state) => state.product.productItems);
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const Container = () => {
           ))}
         </div>
       ) : (
-        <div className={style.loader}></div>
+        <Loader />
       )}
     </div>
   );
