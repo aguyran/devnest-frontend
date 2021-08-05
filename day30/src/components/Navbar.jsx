@@ -1,6 +1,5 @@
 import style from "../styles/navbar.module.css";
 import { FaShoppingCart } from "react-icons/fa";
-import { BiSearchAlt } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
 import { FaAmazon } from "react-icons/fa";
 const Navbar = () => {

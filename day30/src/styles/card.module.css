@@ -8,6 +8,7 @@
   margin: 1rem auto;
   text-align: center;
   padding: 2em;
+  text-decoration: none;
 }
 
 .container img {
@@ -16,10 +17,11 @@
   margin-bottom: 1rem;
 }
 .title,
-.description {
+.description,
+p {
   text-overflow: ellipsis;
-
+  text-decoration: none;
   overflow: hidden;
-
+  color: var(--nav-bar-light-blue);
   white-space: nowrap;
 }

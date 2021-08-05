@@ -15,13 +15,7 @@ const Container = () => {
       {products.length !== 0 ? (
         <div className={style.container}>
           {products.map((el, index) => (
-            <Cards
-              title={el.title}
-              description={el.description}
-              imageUrl={el.image}
-              price={el.price}
-              key={el.id}
-            />
+            <Cards currentState={el} key={index} />
           ))}
         </div>
       ) : (
