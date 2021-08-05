@@ -24,11 +24,11 @@ const productSlice = createSlice({
     toggleLoading: (state, action) => {
       state.isLoading = !state.isLoading;
     },
-    extraReducers: {
-      [fetchProducts.fulfilled]: (state, action) => {
-        state.productItems = action.payload;
-        state.isLoading = false;
-      },
+  },
+  extraReducers: {
+    [fetchProducts.fulfilled]: (state, action) => {
+      state.productItems = action.payload;
+      state.isLoading = false;
     },
   },
 });
