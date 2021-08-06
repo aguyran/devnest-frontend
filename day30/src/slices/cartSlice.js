@@ -3,17 +3,26 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     isVisible: false,
-    cartItems: [],
+    cartItems: {},
   },
   reducers: {
     addItemCart: (state, action) => {
-      state.cartItems.push(action.payload);
+      state.cartItems[action.payload.id + "xd"] = action.payload;
     },
     removeItemCart: (state, action) => {
-      state.cartItems = state.cartItems.filter !== action.id;
+      delete state.cartItems[action.payload];
+    },
+    updateQuantity: (state, action) => {
+      console.log(action);
+      console.log(action.payload.id);
+      state.cartItems[action.payload.id].quantity = action.payload.value;
+    },
+    toggleVisible: (state) => {
+      state.isVisible = !state.isVisible;
     },
   },
 });
 
-export const { addItemCart, removeItemCart } = cartSlice.actions;
+export const { addItemCart, removeItemCart, toggleVisible, updateQuantity } =
+  cartSlice.actions;
 export default cartSlice.reducer;

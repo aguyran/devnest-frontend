@@ -9,7 +9,6 @@ const Container = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProducts());
-    console.log(products);
   }, []);
   return (
     <div className={style.mainContainer}>

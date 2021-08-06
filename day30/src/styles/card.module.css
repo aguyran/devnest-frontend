@@ -9,6 +9,7 @@
   text-align: center;
   padding: 2em;
   text-decoration: none;
+  position: relative;
   transition: 250ms ease-in;
 }
 .container:hover {
@@ -30,4 +31,25 @@ p {
 }
 .links {
   text-decoration: none;
+}
+.heartEmpty,
+.heartFilled {
+  position: absolute;
+  width: 1.6rem;
+  height: auto;
+  top: 1rem;
+  right: 1rem;
+  transition: 250ms ease-in;
+}
+.heartFilled {
+  fill: var(--heart-pink);
+  color: var(--heart-pink);
+}
+.heartEmpty {
+  fill: var(--darkest-blue);
+}
+.heartFilled:hover,
+.heartEmpty:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }

@@ -3,9 +3,10 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { FaAmazon } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { toggleVisible } from "../slices/cartSlice";
 const Navbar = () => {
-  const [isCart, setCart] = useState(false);
+  const dispatch = useDispatch();
   return (
     <nav>
       <div className={style.navbarMain}>
@@ -16,18 +17,15 @@ const Navbar = () => {
           </Link>
 
           <div className={style.rightIcons}>
-            <FaHeart className={style.wishlistHeart} />
+            <Link to="/wishlist">
+              <FaHeart className={style.wishlistHeart} />
+            </Link>
             <FaShoppingCart
               className={style.shoppingCart}
-              onClick={() => setCart(true)}
+              onClick={() => dispatch(toggleVisible())}
             />
           </div>
         </div>
-      </div>
-      <div className={isCart ? style.cart : style.notVisible}>
-        <h1 className={style.cross} onClick={() => setCart(false)}>
-          X
-        </h1>
       </div>
     </nav>
   );

@@ -5,7 +5,7 @@ import { fetchProduct } from "../slices/productSlice";
 import { useState } from "react";
 import style from "../styles/details.module.css";
 import Loader from "./Loader";
-import { addItemCart, removeItemCart } from "../slices/cartSlice";
+import { addItemCart } from "../slices/cartSlice";
 const Details = () => {
   const { isLoading, currentProduct } = useSelector((state) => state.product);
   const [slider, setSlider] = useState(1);
@@ -50,9 +50,12 @@ const Details = () => {
               </button>
             </div>
             <button
-              onClick={() =>
-                dispatch(addItemCart({ ...currentProduct, quantity: slider }))
-              }
+              onClick={() => {
+                if (slider >= 1)
+                  dispatch(
+                    addItemCart({ ...currentProduct, quantity: slider })
+                  );
+              }}
             >
               Add to Cart
             </button>

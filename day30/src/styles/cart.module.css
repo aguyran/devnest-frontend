@@ -1,0 +1,20 @@
+.cart {
+  width: 30%;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  background-color: white;
+  transition: 600ms ease-in;
+  border-radius: 1rem;
+}
+.cross {
+  text-align: right;
+  color: var(--darkest-blue);
+
+  padding-right: 1em;
+}
+.notVisible {
+  display: none;
+}
