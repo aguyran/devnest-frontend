@@ -13,7 +13,7 @@
   transition: 250ms ease-in;
 }
 .container:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .container img {
   width: 150px;

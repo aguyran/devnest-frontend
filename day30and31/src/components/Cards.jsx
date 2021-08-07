@@ -23,7 +23,7 @@ const Cards = (currentState) => {
             e.preventDefault();
             if (!(id + "xd" in wishList))
               dispatch(addItemWishlist({ ...currentState }));
-            else dispatch(removeItemWishlist(id));
+            else dispatch(removeItemWishlist(id + "xd"));
           }}
         ></FaHeart>
         <img src={image} alt={title} />

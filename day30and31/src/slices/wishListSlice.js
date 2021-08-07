@@ -11,7 +11,7 @@ const wishListSlice = createSlice({
         action.payload.currentState;
     },
     removeItemWishlist: (state, action) => {
-      delete state.wishListItems[action.payload + "xd"];
+      delete state.wishListItems[action.payload];
     },
   },
 });

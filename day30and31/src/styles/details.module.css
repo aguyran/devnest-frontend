@@ -15,6 +15,38 @@
   color: white;
   text-align: center;
 }
+.content input {
+  background-color: var(--nav-bar-light-blue);
+  outline: none;
+  color: #fff;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.addtoCart {
+  background-color: var(--heart-pink);
+  border: none;
+  border-radius: 1rem;
+  padding: 1em;
+  transition: 250ms ease-in;
+  color: white;
+}
+.buttons {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: var(--darkest-blue);
+
+  color: white;
+  font-size: 1.25rem;
+  transition: 250ms ease-in;
+}
+.buttons:hover,
+.addtoCart:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 .slider {
   margin-top: 2rem;
 }

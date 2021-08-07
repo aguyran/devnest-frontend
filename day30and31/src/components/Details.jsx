@@ -34,6 +34,7 @@ const Details = () => {
             </div>
             <div className={style.slider}>
               <button
+                className={style.buttons}
                 onClick={() => {
                   if (slider < 100) setSlider(slider + 1);
                 }}
@@ -42,6 +43,7 @@ const Details = () => {
               </button>
               <input type="number" disabled value={slider}></input>
               <button
+                className={style.buttons}
                 onClick={() => {
                   if (slider >= 1) setSlider(slider - 1);
                 }}
@@ -50,6 +52,7 @@ const Details = () => {
               </button>
             </div>
             <button
+              className={style.addtoCart}
               onClick={() => {
                 if (slider >= 1)
                   dispatch(
