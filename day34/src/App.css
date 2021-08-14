@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+body {
+  background-color: #111;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+.container_card {
+  margin-top: 1rem;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 1rem;
+}
+input {
+  display: inline;
+  height: 2rem;
+  border-radius: 1rem;
+}
+.addBtn {
+  width: 4rem;
+  border-radius: 0.2rem;
+  height: 2rem;
+}
+.wrapperforinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.deleteBtn,
+.markStatus {
+  width: 4rem;
+
+  margin: 0.4em;
+  border-radius: 0.2rem;
+}
+.done.description {
+  text-decoration: line-through;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
